@@ -6,11 +6,17 @@
 /*   By: vescaffr <vescaffr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 16:50:41 by vescaffr          #+#    #+#             */
-/*   Updated: 2022/05/11 17:22:20 by vescaffr         ###   ########.fr       */
+/*   Updated: 2022/05/11 22:52:27 by vescaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+#if defined (__APPLE__)
+# define PTR_NULL "0x0"
+#elif __linux__
+# define PTR_NULL "(nil)"
+#endif
 
 int	ft_printlen(unsigned long long nbr)
 {
@@ -47,13 +53,10 @@ int	ft_printp(unsigned long long nbr)
 	int	count;
 
 	count = 0;
-	count += write(1, "0x", 2);
 	if (nbr == 0)
-		count += write(1, "0", 1);
-	else
-	{
-		ft_printpp(nbr);
-		count += ft_printlen(nbr);
-	}
+		return (count += ft_putstr(PTR_NULL));
+	count += write(1, "0x", 2);
+	ft_printpp(nbr);
+	count += ft_printlen(nbr);
 	return (count);
 }

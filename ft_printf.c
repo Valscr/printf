@@ -6,7 +6,7 @@
 /*   By: vescaffr <vescaffr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 14:41:11 by vescaffr          #+#    #+#             */
-/*   Updated: 2022/05/11 18:05:22 by vescaffr         ###   ########.fr       */
+/*   Updated: 2022/05/11 23:20:12 by vescaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,13 @@ int	ft_printf(const char *in, ...)
 
 /*int	main()
 {	
-	char	a;
 	char    *d;
 
-	a = 0;
-	d = " %x ";
-	ft_printf(d, &a);
+	d = "%s";
+	ft_printf(d, NULL);
 	printf("\n");
-	printf(d, &a);
+	printf(d, NULL);
 	printf("\n");
-	printf("longeur de printf = %d\n", printf(d, &a));
-	printf("longeur de ft_printf = %d\n", ft_printf(d, &a));
+	printf("longeur de printf = %d\n", printf(d, NULL));
+	printf("longeur de ft_printf = %d\n", ft_printf(d, NULL));
 }*/
