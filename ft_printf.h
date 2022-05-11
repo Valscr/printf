@@ -6,7 +6,7 @@
 /*   By: vescaffr <vescaffr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 00:06:02 by vescaffr          #+#    #+#             */
-/*   Updated: 2022/05/11 22:51:42 by vescaffr         ###   ########.fr       */
+/*   Updated: 2022/05/12 00:48:33 by vescaffr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ int			ft_printcounthex(unsigned int a);
 int			ft_printhex(unsigned int a, const char in);
 void		ft_printpp(unsigned long long nbr);
 int			ft_printp(unsigned long long nbr);
-void		ft_putstrvoid(const char *c);
-int			ft_strlen(char *c);
 int			ft_putint(int c);
 int			ft_putunsigned(unsigned int c);
 int			ft_printchar(int c);
